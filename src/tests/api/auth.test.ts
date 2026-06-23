@@ -3,10 +3,8 @@ import { IncomingHttpHeaders } from "http";
 import { getAPIKey } from "../../api/auth.js";
 
 const header: IncomingHttpHeaders = {
-  authorization: "ApiKey 10"
-
+  authorization: "ApiKey 10",
 };
-
 
 describe("person", () => {
   test("header is null", () => {
@@ -17,6 +15,3 @@ describe("person", () => {
     expect(getAPIKey(header)).toBe("10");
   });
 });
-
-
-
